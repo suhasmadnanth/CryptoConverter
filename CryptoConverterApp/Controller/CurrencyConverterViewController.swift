@@ -52,9 +52,33 @@ class CurrencyConverterViewController: UIViewController, CoinManagerDelegate {
     
     func didConvertCoinValues( coin: CoinModel) {
         DispatchQueue.main.async {
-            self.toCurrencyConverterTextField.text = String(format: "%2f", coin.convertTo)
+            if let conversionValue = coin.convertTo{
+                self.toCurrencyConverterTextField.text = String(format: "%2f", conversionValue)
+            }
         }
     }
+    
+    func didUpdateWithError(error: Error) {
+        print("The error is \(error.localizedDescription)")
+        let alert = UIAlertController(title: "Unable to convert", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        DispatchQueue.main.async {
+            alert.addAction(action)
+            alert.message = error.localizedDescription
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func didUpdateWithParseError(coin: CoinModel) {
+        let alert = UIAlertController(title: "Unable to convert", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default)
+        DispatchQueue.main.async {
+            alert.addAction(action)
+            alert.message = coin.error_message
+            self.present(alert, animated: true)
+        }
+    }
+    
 }
 
 extension CurrencyConverterViewController: UITextFieldDelegate{
@@ -70,7 +94,6 @@ extension CurrencyConverterViewController: UITextFieldDelegate{
         return true
     }
 }
-
 
 extension CurrencyConverterViewController : UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -104,10 +127,9 @@ extension CurrencyConverterViewController : UIPickerViewDataSource, UIPickerView
             toCurrencyConverterButton.setTitle(coinManager.fiatCurrency[row], for: .normal)
             toCurrentPickerItem = coinManager.fiatCurrency[row]
         }
+        toCurrencyConverterTextField.text = ""
         convert()
     }
-    
-    
     
     func convert() {
         if let amount = self.fromCurrencyConverterTextField.text{

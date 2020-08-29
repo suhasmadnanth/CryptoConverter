@@ -8,5 +8,6 @@
 
 import Foundation
 struct CoinModel {
-    let convertTo : Double
+    let convertTo : Double?
+    let error_message: String?
 }

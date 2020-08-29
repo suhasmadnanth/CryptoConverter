@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		84080C5424F1845800866FE4 /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84080C5324F1845800866FE4 /* CoinData.swift */; };
 		84080C5624F22CC400866FE4 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84080C5524F22CC400866FE4 /* CoinModel.swift */; };
+		842AA3A324FAA932003B8D10 /* CryptoConverterConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842AA3A224FAA932003B8D10 /* CryptoConverterConstants.swift */; };
 		842D053624EE57F0009C5526 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D053524EE57F0009C5526 /* AppDelegate.swift */; };
 		842D053824EE57F0009C5526 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D053724EE57F0009C5526 /* SceneDelegate.swift */; };
 		842D053A24EE57F0009C5526 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842D053924EE57F0009C5526 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		6BCF50DAD604F6D270C01BEB /* Pods-CryptoConverterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoConverterApp.release.xcconfig"; path = "Target Support Files/Pods-CryptoConverterApp/Pods-CryptoConverterApp.release.xcconfig"; sourceTree = "<group>"; };
 		84080C5324F1845800866FE4 /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 		84080C5524F22CC400866FE4 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		842AA3A224FAA932003B8D10 /* CryptoConverterConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoConverterConstants.swift; sourceTree = "<group>"; };
 		842D053224EE57F0009C5526 /* CryptoConverterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoConverterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		842D053524EE57F0009C5526 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		842D053724EE57F0009C5526 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,6 @@
 				014C6E51180A9AD1E57B8CC2 /* Pods-CryptoConverterApp.debug.xcconfig */,
 				6BCF50DAD604F6D270C01BEB /* Pods-CryptoConverterApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +101,7 @@
 				84BB508124EF8CEE002CDC25 /* CoinManager.swift */,
 				84080C5324F1845800866FE4 /* CoinData.swift */,
 				84080C5524F22CC400866FE4 /* CoinModel.swift */,
+				842AA3A224FAA932003B8D10 /* CryptoConverterConstants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +244,7 @@
 				842D053824EE57F0009C5526 /* SceneDelegate.swift in Sources */,
 				84BB508224EF8CEE002CDC25 /* CoinManager.swift in Sources */,
 				84080C5624F22CC400866FE4 /* CoinModel.swift in Sources */,
+				842AA3A324FAA932003B8D10 /* CryptoConverterConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,8 @@ import SwiftyJSON
 
 
 struct CoinData: Decodable {
-    let data: DataKeyContents
+    let data: DataKeyContents?
+    let status: StatusKeyContents
 }
 
 struct DataKeyContents: Decodable {
@@ -19,4 +20,9 @@ struct DataKeyContents: Decodable {
     let symbol: String
     let amount: Int
     let quote: JSON
+}
+
+struct StatusKeyContents: Decodable {
+    let error_code: Int
+    let error_message: String?
 }
