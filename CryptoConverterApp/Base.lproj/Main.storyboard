@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Currency Converter View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CurrencyConverterViewController" customModule="CryptoConverterApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P5D-LY-P1k">
+                                <rect key="frame" x="20" y="64" width="374" height="300"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McC-Vt-Epd">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="150"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NAZ-uo-zWS">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="150"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C2B-v4-I5J">
+                                                        <rect key="frame" x="5" y="58" width="177" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="187" id="F6w-HJ-0mX"/>
+                                                    <constraint firstItem="C2B-v4-I5J" firstAttribute="centerY" secondItem="NAZ-uo-zWS" secondAttribute="centerY" id="fWz-en-BpO"/>
+                                                    <constraint firstAttribute="trailing" secondItem="C2B-v4-I5J" secondAttribute="trailing" constant="5" id="mqg-r4-72E"/>
+                                                    <constraint firstItem="C2B-v4-I5J" firstAttribute="leading" secondItem="NAZ-uo-zWS" secondAttribute="leading" constant="5" id="xht-iY-LRs"/>
+                                                    <constraint firstItem="C2B-v4-I5J" firstAttribute="centerX" secondItem="NAZ-uo-zWS" secondAttribute="centerX" id="xiw-LY-qbn"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nUO-lS-ipA">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="150"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juc-ns-gbp">
+                                                        <rect key="frame" x="20" y="45" width="147" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="BTC"/>
+                                                        <connections>
+                                                            <action selector="fromCurrencyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ts1-gw-vjb"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="juc-ns-gbp" secondAttribute="trailing" constant="20" id="43M-MN-y36"/>
+                                                    <constraint firstItem="juc-ns-gbp" firstAttribute="centerY" secondItem="nUO-lS-ipA" secondAttribute="centerY" id="9OZ-Yr-o9W"/>
+                                                    <constraint firstItem="juc-ns-gbp" firstAttribute="centerX" secondItem="nUO-lS-ipA" secondAttribute="centerX" id="JvF-D6-B7I"/>
+                                                    <constraint firstItem="juc-ns-gbp" firstAttribute="leading" secondItem="nUO-lS-ipA" secondAttribute="leading" constant="20" id="Rdh-Kd-lc3"/>
+                                                    <constraint firstAttribute="width" constant="187" id="chc-7e-soz"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="2hO-RA-2qq"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tby-Yn-6xh">
+                                        <rect key="frame" x="0.0" y="150" width="374" height="150"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vf0-61-qnU">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="150"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nqi-hE-feQ">
+                                                        <rect key="frame" x="5" y="58" width="177" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="Nqi-hE-feQ" firstAttribute="centerY" secondItem="vf0-61-qnU" secondAttribute="centerY" id="35M-Iq-7eN"/>
+                                                    <constraint firstItem="Nqi-hE-feQ" firstAttribute="centerX" secondItem="vf0-61-qnU" secondAttribute="centerX" id="WhF-ge-Brh"/>
+                                                    <constraint firstItem="Nqi-hE-feQ" firstAttribute="leading" secondItem="vf0-61-qnU" secondAttribute="leading" constant="5" id="X4N-xO-zQo"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Nqi-hE-feQ" secondAttribute="trailing" constant="5" id="XY8-KZ-OOQ"/>
+                                                    <constraint firstAttribute="width" constant="187" id="kVq-jP-7au"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1kI-KI-dUv">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="150"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrn-cI-TDk">
+                                                        <rect key="frame" x="20" y="45" width="147" height="60"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                        <state key="normal" title="USD"/>
+                                                        <connections>
+                                                            <action selector="toCurrencyButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0P3-r2-Hej"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="lrn-cI-TDk" secondAttribute="trailing" constant="20" id="UpD-bt-jtr"/>
+                                                    <constraint firstItem="lrn-cI-TDk" firstAttribute="centerY" secondItem="1kI-KI-dUv" secondAttribute="centerY" id="buy-nr-sbX"/>
+                                                    <constraint firstItem="lrn-cI-TDk" firstAttribute="centerX" secondItem="1kI-KI-dUv" secondAttribute="centerX" id="t2A-AA-aDg"/>
+                                                    <constraint firstItem="lrn-cI-TDk" firstAttribute="leading" secondItem="1kI-KI-dUv" secondAttribute="leading" constant="20" id="y5A-5q-5jN"/>
+                                                    <constraint firstAttribute="width" constant="187" id="yfY-dd-G7S"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="jm8-tt-hhg"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mo5-3g-ThO">
+                                <rect key="frame" x="20" y="384" width="374" height="200"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Do4-7a-jrH">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRo-rG-VQA">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="200"/>
+                                            </pickerView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="IRo-rG-VQA" firstAttribute="top" secondItem="Do4-7a-jrH" secondAttribute="top" id="4wc-oN-XC4"/>
+                                            <constraint firstAttribute="height" constant="200" id="GCW-hm-Z3v"/>
+                                            <constraint firstItem="IRo-rG-VQA" firstAttribute="leading" secondItem="Do4-7a-jrH" secondAttribute="leading" id="QMd-pJ-gg9"/>
+                                            <constraint firstAttribute="bottom" secondItem="IRo-rG-VQA" secondAttribute="bottom" id="YKU-f1-eXv"/>
+                                            <constraint firstAttribute="trailing" secondItem="IRo-rG-VQA" secondAttribute="trailing" id="haX-L4-If8"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Do4-7a-jrH" firstAttribute="top" secondItem="Mo5-3g-ThO" secondAttribute="top" id="1U8-np-Ij0"/>
+                                    <constraint firstItem="Do4-7a-jrH" firstAttribute="leading" secondItem="Mo5-3g-ThO" secondAttribute="leading" id="OHH-qZ-WJE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Do4-7a-jrH" secondAttribute="trailing" id="d8k-H2-TMI"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="P5D-LY-P1k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6yn-nC-Bph"/>
+                            <constraint firstItem="Mo5-3g-ThO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EHO-yJ-gOb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P5D-LY-P1k" secondAttribute="trailing" constant="20" id="FK1-r8-ZBV"/>
+                            <constraint firstItem="P5D-LY-P1k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="GZJ-4r-UVj"/>
+                            <constraint firstItem="Mo5-3g-ThO" firstAttribute="top" secondItem="P5D-LY-P1k" secondAttribute="bottom" constant="20" id="KIh-In-CFZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mo5-3g-ThO" secondAttribute="trailing" constant="20" id="yvU-y6-txc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cryptoCoinsPicker" destination="IRo-rG-VQA" id="hty-NJ-70w"/>
+                        <outlet property="fromCurrencyConverterButton" destination="juc-ns-gbp" id="gMv-fC-L2c"/>
+                        <outlet property="fromCurrencyConverterTextField" destination="C2B-v4-I5J" id="u1U-qg-Pzi"/>
+                        <outlet property="toCurrencyConverterButton" destination="lrn-cI-TDk" id="1k3-jY-tVO"/>
+                        <outlet property="toCurrencyConverterTextField" destination="Nqi-hE-feQ" id="ebV-As-kon"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
